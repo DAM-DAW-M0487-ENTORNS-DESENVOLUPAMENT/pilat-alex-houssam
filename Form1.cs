@@ -82,5 +82,19 @@ namespace PilaT
             MessageBox.Show(sortida.ToString());
 
         }
+
+        private void btnPolaca_Click(object sender, EventArgs e)
+        {
+            string entrada = txtPolaca.Text;
+
+            if (!Polaca.EsNotacionPolaca(entrada))
+            {
+                MessageBox.Show("La entrada está en notación polaca.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La entrada NO está en notación polaca.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
